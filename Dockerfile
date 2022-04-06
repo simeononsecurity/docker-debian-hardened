@@ -10,7 +10,7 @@ RUN apt-get update && apt-get -fuy full-upgrade -y && apt-get -fuy install git a
 RUN echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal main' > /etc/apt/sources.list.d/ansible.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 && apt update && apt-get install -y ansible
 
 RUN git clone https://github.com/simeononsecurity/docker-debian-hardened.git
-RUN cd /docker-ubuntu-hardened/ && chmod +x ./dockersetup.sh
-RUN cd /docker-ubuntu-hardened && bash ./dockersetup.sh
+RUN cd /docker-debian-hardened/ && chmod +x ./dockersetup.sh
+RUN cd /docker-debian-hardened/ && bash ./dockersetup.sh
 
 ENTRYPOINT [ "/bin/bash" ]

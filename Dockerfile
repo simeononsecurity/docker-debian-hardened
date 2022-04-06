@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian:latest
 ENV DEBIAN_FRONTEND noninteractive
 ENV container docker
 ENV TERM=xterm

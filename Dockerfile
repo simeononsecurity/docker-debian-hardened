@@ -1,4 +1,9 @@
 FROM debian:latest
+
+LABEL org.opencontainers.image.source="https://github.com/simeononsecurity/docker-debian-hardened"
+LABEL org.opencontainers.image.description="Hardened Debian Docker Container with arm, arm64, and amd64 support"
+LABEL org.opencontainers.image.authors="simeononsecurity"
+
 ENV DEBIAN_FRONTEND noninteractive
 ENV container docker
 ENV TERM=xterm
@@ -15,3 +20,4 @@ RUN cd /docker-debian-hardened/ && chmod +x ./dockersetup.sh
 RUN cd /docker-debian-hardened/ && bash ./dockersetup.sh
 
 ENTRYPOINT [ "/bin/bash" ]
+

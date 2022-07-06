@@ -20,4 +20,3 @@ RUN cd /docker-debian-hardened/ && chmod +x ./dockersetup.sh
 RUN cd /docker-debian-hardened/ && bash ./dockersetup.sh
 
 ENTRYPOINT [ "/bin/bash" ]
-

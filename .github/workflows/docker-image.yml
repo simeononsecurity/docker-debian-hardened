@@ -51,5 +51,5 @@ jobs:
         password: ${{ secrets.PAT_TOKEN }}
 
     - name: Build the simeononsecurity/docker-debian-hardened:latest Docker image for Github Registry
-      run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes && docker buildx build --platform linux/amd64,linux/armhf,linux/arm64 -t simeononsecurity/docker-debian-hardened:latest --progress=plain --push .
+      run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes && docker buildx build --platform linux/amd64,linux/armhf,linux/arm64 -t ghcr.io/simeononsecurity/docker-debian-hardened:latest --progress=plain --push .
 
